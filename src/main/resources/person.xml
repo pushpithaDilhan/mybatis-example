@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "Person">
+
+    <insert id = "insert" parameterType = "com.test.model.Person">
+        INSERT INTO person (name, age, mobile) VALUES (#{name}, #{age}, #{mobile});
+
+        <selectKey keyProperty = "nic" resultType = "int" order = "AFTER">
+            select last_insert_id() as nic
+        </selectKey>
+
+    </insert>
+
+</mapper>

@@ -1,0 +1,6 @@
+CREATE TABLE test.person (
+  nic INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(20) NULL,
+  age INT NULL,
+  mobile VARCHAR(10) NULL,
+  PRIMARY KEY (nic));
